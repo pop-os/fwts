@@ -763,7 +763,9 @@ static const struct file_operations efi_runtime_fops = {
 	.unlocked_ioctl	= efi_runtime_ioctl,
 	.open		= efi_runtime_open,
 	.release	= efi_runtime_close,
+#if LINUX_VERSION_CODE < KERNEL_VERSION(6, 0, 0)
 	.llseek		= no_llseek,
+#endif
 };
 
 static struct miscdevice efi_runtime_dev = {
@@ -798,4 +800,3 @@ static void __exit efi_runtime_exit(void)
 
 module_init(efi_runtime_init);
 module_exit(efi_runtime_exit);
-

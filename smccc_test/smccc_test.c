@@ -193,7 +193,9 @@ static const struct file_operations smccc_test_fops = {
 	.unlocked_ioctl	= smccc_test_ioctl,
 	.open		= smccc_test_open,
 	.release	= smccc_test_close,
+#if LINUX_VERSION_CODE < KERNEL_VERSION(6, 0, 0)
 	.llseek		= no_llseek,
+#endif
 };
 
 static struct miscdevice smccc_test_dev = {

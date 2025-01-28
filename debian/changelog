@@ -1,3 +1,9 @@
+fwts (25.01.00-0ubuntu1pop1) noble; urgency=medium
+
+  * Backport to Pop!_OS
+
+ -- Michael Aaron Murphy <michael@mmurphy.dev>  Tue, 28 Jan 2025 14:06:17 +0100
+
 fwts (25.01.00-0ubuntu1) plucky; urgency=medium
 
   [Armin Wolf] 
